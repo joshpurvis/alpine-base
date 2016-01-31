@@ -1,6 +1,5 @@
 FROM alpine:3.3
-
-RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates && \
+RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates alpine-sdk && \
     export ALPINE_GLIBC_BASE_URL="https://circle-artifacts.com/gh/andyshinn/alpine-pkg-glibc/6/artifacts/0/home/ubuntu/alpine-pkg-glibc/packages/x86_64" && \
     export ALPINE_GLIBC_PACKAGE="glibc-2.21-r2.apk" && \
     export ALPINE_GLIBC_BIN_PACKAGE="glibc-bin-2.21-r2.apk" && \
